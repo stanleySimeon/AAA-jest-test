@@ -1,5 +1,5 @@
-const stringLength = (str) => {
-    const characterCount = str.length;
+const stringLength = (string) => {
+    const characterCount = string.length;
     if (characterCount) {
         if (characterCount <= 10) {
             return characterCount;
@@ -9,7 +9,7 @@ const stringLength = (str) => {
     throw new Error('Unexpected Empty String');
 };
 
-const reverseString = (str) => str.split('').reverse().join('');
+const reverseString = (string) => string.split('').reverse().join('');
 
 function Calculator() {
     this.add = (a, b) => a + b;
@@ -23,12 +23,12 @@ function Calculator() {
     };
 }
 
-const capitalize = (str) => {
-    if (typeof str !== 'string') {
+const capitalize = (string) => {
+    if (typeof string !== 'string') {
         throw new Error('Error: Cannot capitalize other type than String');
     }
-    const newStr = str.charAt(0).toUpperCase() + str.slice(1);
-    return newStr;
+    const newString = string.charAt(0).toUpperCase() + string.slice(1);
+    return newString;
 };
 
 module.exports = {

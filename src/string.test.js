@@ -1,7 +1,7 @@
 const {
     stringLength, reverseString, Calculator, capitalize } = require('./string');
 
-describe('String length count', () => {
+// StringLength count start
     it('String: HelloWorld', () => {
         const charCount = stringLength('HelloWorld');
         expect(charCount).toBe(10);
@@ -20,9 +20,10 @@ describe('String length count', () => {
             stringLength('ThisWordIsLongerThanHello');
         }).toThrow('String can\'t be longer than 10 characters');
     });
-});
 
-describe('Reverse String', () => {
+//StringLength count end
+
+//StringLength reverse start
     it('Reverse Hello', () => {
         const reversedString = reverseString('Hello');
         expect(reversedString).toBe('olleH');
@@ -31,9 +32,10 @@ describe('Reverse String', () => {
         const reversedString = reverseString('H');
         expect(reversedString).toBe('H');
     });
-});
+// StringLength reverse end
 
-describe('Calculator', () => {
+
+// Calculator add test start
     const calculator = new Calculator();
     describe('Addition Method', () => {
         it('Add 20 to 27', () => {
@@ -48,8 +50,9 @@ describe('Calculator', () => {
             const result = calculator.add(11, -9);
             expect(result).toBe(2);
         });
-    });
-    describe('Substract Method', () => {
+// Calculator add test end
+
+// Calculator substract test start
         it('Substract 7 to 95', () => {
             const result = calculator.substract(7, 95);
             expect(result).toBe(-88);
@@ -62,8 +65,9 @@ describe('Calculator', () => {
             const result = calculator.substract(0.5, 100);
             expect(result).toBeCloseTo(-99.5);
         });
-    });
-    describe('Multiply Method', () => {
+// Calculator substract test end
+
+// Calculator multiply test start
         it('Multiply 25 to 0.5', () => {
             const result = calculator.multiply(0.5, 25);
             expect(result).toBe(12.5);
@@ -76,8 +80,10 @@ describe('Calculator', () => {
             const result = calculator.multiply(0.5, 2);
             expect(result).toBeCloseTo(1.0);
         });
-    });
-    describe('Divide Method', () => {
+// Calculator multiply test end
+
+
+// Calculator divided test start
         it('Divide 25/10', () => {
             const result = calculator.divide(25, 10);
             expect(result).toBeCloseTo(2.5);
@@ -94,8 +100,9 @@ describe('Calculator', () => {
             expect(() => calculator.divide(5, 0)).toThrow('Can\'t Divide By Zero');
         });
     });
-});
+// Calculator divided test end
 
+// Capitalize test start 
 describe('Capitalize', () => {
     it('Capitalize hello', () => {
         const capitalized = capitalize('hello');
@@ -105,3 +112,4 @@ describe('Capitalize', () => {
         expect(() => capitalize(3)).toThrow('Error: Cannot capitalize other type than String');
     });
 });
+// Capitalize test end
