@@ -1,5 +1,4 @@
-const {
-    stringLength, reverseString, Calculator, capitalize } = require('./string');
+const { stringLength, reverseString, Calculator, capitalize } = require('./string');
 
 // StringLength count start
     it('String: HelloWorld', () => {
@@ -20,7 +19,6 @@ const {
             stringLength('ThisWordIsLongerThanHello');
         }).toThrow('String can\'t be longer than 10 characters');
     });
-
 //StringLength count end
 
 //StringLength reverse start
